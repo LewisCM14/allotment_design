@@ -1,4 +1,5 @@
 site_name: Design Document
+site_url: https://lewiscm14.github.io/allotment_design/
 nav:
     - Home: index.md
     - High Level Requirements: overview.md
