@@ -286,16 +286,16 @@ There are several aspects to consider when deciding on the appropriate technolog
 
 !!! example "Feature-Based Folder Structure"
 
-    Due to the application having clearly defined interfaces that can be grouped into features a feature based folder structure makes sense, allowing related logic to be kept together.
+    Due to the application having clearly defined interfaces that can be grouped into features, a feature based folder structure makes sense, allowing related logic to be kept together.
 
-    ```
+    ``` title="Example Frontend Folder Structure"
     /src
-    /features
-        /growGuides
-        - GrowGuideContainer.tsx
-        - GrowGuidePresenter.tsx
-        - growGuideService.ts
-        - growGuideSchema.ts
+        /features
+            /growGuides
+                - GrowGuideContainer.tsx
+                - GrowGuidePresenter.tsx
+                - growGuideService.ts
+                - growGuideSchema.ts
     ```
 
 ---

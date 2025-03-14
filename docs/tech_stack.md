@@ -2,21 +2,24 @@
 
 | Layer | Technology | Version | Purpose |
 | --- | --- | --- | --- |
-| Operating System | Linux | | Manage Computer Process |
+| Operating System | Ubuntu | 24.04 | Manage Computer Process |
 |||||
-| Database | PostgreSQL | | Database |
-| Database | pgAdmin | | Database Management |
+| Database | PostgreSQL | 16 | Database |
+| Database | pgAdmin4 | 9.1 | Database Management |
 |||||
-| Server | Python | | Coding Language |
-| Server | UV | | Package Management |
-| Server | FastAPI | | Backend Framework |
-| Server | SQLAlchemy | | ORM |
-| Server | Pydantic | | Typing |
-| Server | Authlib | | Authentication | 
+| Server | Python | 3.13 | Coding Language |
+| Server | UV | 0.6.3 | Package Management |
+| Server | FastAPI | 0.115 | Backend Framework |
+| Server | SQLAlchemy | 2.0.38 | ORM |
+| Server | asyncpg | 0.30.0 | Database Driver |
+| Server | Alembic | 1.15.1 | Database Migrations |
+| Server | Pydantic | 2.10.6 | Typing |
+| Server | Pydantic | 2.8.1 | Settings Management |
+| Server | Authlib | 1.5.1 | Authentication | 
 | Server | fastapi.security | | Authentication |
-| Server | Pytest | | Test Runner |
-| Server | Ruff | | Formatting & Linting |
-| Server | MyPy | | Type Checking |
+| Server | Pytest | 8.3.5 | Test Runner |
+| Server | Ruff | 0.9.10 | Formatting & Linting |
+| Server | MyPy | 1.15 | Type Checking |
 |||||
 | Client | TypeScript | | Coding Language |
 | Client | NPM | | Package Management |

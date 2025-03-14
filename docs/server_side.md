@@ -320,6 +320,33 @@ The Factory pattern is used to simplify the creation of complex domain objects w
 
 ---
 
+### Folder Structure
+
+!!! example "Pattern-Based Folder Structure"
+
+    Due to the server-side being a FastAPI application that has a well defined architecture that makes use of specified design patterns the following folder structure makes sense, allowing related logic to be kept together.
+
+    ``` title="Example Backend Folder Structure"
+    /app
+        /api
+            /core
+                - config.py
+                - database.py
+            /models
+                - Contains the Database Models.
+            /repositories
+                - Encapsulate data access logic via SQL/ORM logic abstracting it into "Repositories".
+            /schemas
+                - Contains the "Factories" that apply business rules and/or validation before persistence.
+            /services
+                - Contains the "Units Of Work" for grouping multiple repository operations into a single transaction.
+            /v1
+                - Contains the API Endpoints.
+        - main.py
+        - settings.yaml
+    ```
+---
+
 ## Server Side ADR
 
 Decision record for the server side technologies selected to support the project. When selecting the intended technologies it is important to remember the project requires a modular, scalable and maintainable architecture to support a progressive web app. The server side must run on Linux based operating systems using technologies that are free for commercial use and can integrate with a PostgreSQL database via a RESTful API with OAuth2 & OpenID Connect support. The technologies must also handle many concurrent users that require a high-read workload, caching is also required to support this as well as background tasks.
