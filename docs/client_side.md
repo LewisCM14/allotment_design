@@ -78,13 +78,16 @@ _High level interface functionality accompanied by low fidelity designs._
 === "User Profile Interface"
     - Ability for users to update their: first name, email address, password and country code.
 
+=== "User Password Reset Interface"
+    - Ability for users to enter a new password, after having coming from the magic link provided via email to their registered address.
+
 <u>_**Low Priority**_</u>
 
 === "User Notification Interface"
     - The ability for users to control: type, method and frequency of notifications they receive. 
 
-=== "User Password Reset Interface"
-    - Ability for users to enter a new password, after having coming from the magic link provided via email to their registered address.
+    !!! info "Please Note"
+        This is a low priority as automated notifications are not part of the minimal viable product. Additional database tables will also be required to provide this functionality. 
 
 ---
 
@@ -108,16 +111,16 @@ _High level interface functionality accompanied by low fidelity designs._
 
 <u>_**High Priority**_</u>
 
-=== "Public Grow Guides"
-    - A interfaces that lists all the publicly available grow guides for users to browse and use. As initial offering this screen should organize the available grow guides into botanical groups that are alphabetically sorted and the guides within each group are to be alphabetized again.
-        - Long term this interface will want a comprehensive filter and search functionality.
-
-<u>_**Low Priority**_</u>
-
 === "Grow Guide"
     - A interface that presents the user with a overview of a specific varieties grow guide. This interface is to double up as the form for creating/editing the grow guide also.
         - For guides a user own there is to be a button that unlocks the guide for editing.
             - This mode will require a method of ensuring users pass validation per field of the form and a method of handling submissions failures in a friendly way.
+
+<u>_**Low Priority**_</u>
+
+=== "Public Grow Guides"
+    - A interfaces that lists all the publicly available grow guides for users to browse and use. As initial offering this screen should organize the available grow guides into botanical groups that are alphabetically sorted and the guides within each group are to be alphabetized again.
+        - Long term this interface will want a comprehensive filter and search functionality.
 
 ???+ tip "Future Improvement"
     When implemented, user interfaces for generating and viewing planting recommendations will also be required.
