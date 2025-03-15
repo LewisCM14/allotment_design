@@ -165,13 +165,13 @@ A Repository class is created for each aggregate or related table group.
 
         **User Repository** 
 
-        - To encapsulate the: User, User Allotment, User Feed Day and User Active Varieties tables Tables.
+        - To encapsulate the: User, User Allotment, User Feed Day and User Active Varieties tables.
 
     === "Family"
 
         **Family Repository**
 
-        - To encapsulate the: Family, Botanical Group, Antagonist & Companion tables.
+        - To encapsulate the: Family, Botanical Group, Family Antagonist & Family Companion tables.
 
     === "Disease & Pests"
         
@@ -199,11 +199,15 @@ A Repository class is created for each aggregate or related table group.
         
         **Day Repository**
 
-        - To encapsulate the Day tables
+        - To encapsulate the Day table.
 
         **Week Repository**
 
-        - To encapsulate the Week & Month tables`
+        - To encapsulate the Week table.
+
+        **Month Repository**
+
+        - To encapsulate the Month table.
         
 ---
 
@@ -225,25 +229,17 @@ Unit of Work classes are created to manage transactions and ensure multiple data
     
     === "Grow Guide"
 
-        **User Seasonal**
-        
-        - Used to group the: Seasons, Week, Variety and User Repositories when providing seasonal based information to a user.
-        
-        **User Daily ToDo**
-        
-        - Used to group the: Day, Variety and User repositories when providing users their daily tasks.
-        
         **User Weekly ToDo**
         
-        - Used to group the: Week, Variety and User repositories when providing users their weekly tasks.
+        - Used to group the: Day, Week, Variety and User repositories when providing users their weekly tasks.
         
         **User Monthly ToDo**
         
-        - Used to group the: Week, Variety and User repositories when providing users their monthly tasks.
+        - Used to group the: Month, Variety, User and Seasonal repositories when providing users their monthly tasks.
         
-        **Variety Page**
+        **Family Page**
             
-        - Used to group the: Variety, Family, Disease, Pest and Intervention repositories in order to populate a specific varieties information page.
+        - Used to group the: Family, Disease, Pest and Intervention repositories in order to populate a specific families information page.
 
 ---
 
