@@ -92,6 +92,7 @@ The solution must also allow for modularity in the applications architecture suc
     
     !!! note
         - The user email & password fields will not require the default `VARCHAR` constraint applied.
+        - The User First Name field will need the `VARCHAR` constraint applied with an additional rule, preventing the used of numbers also.
         - When an user is removed from this table a cascading delete upon the: user active varieties, user feed day and user allotment tables will be required for data consistency.
         
     ???+ tip "Future Improvement"
