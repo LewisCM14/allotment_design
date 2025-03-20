@@ -31,7 +31,8 @@ The application is to be implemented following the Walking Skeleton approach, al
         - Pytest can be utilized at this point to allow for the automated integration testing of the server and database layers.
 
 1. **Authentication**
-    - The User registration and login endpoints are to be created, allowing for the implementation of OAuth2 with JWT using the Authlib and fastapi.security libraries.
+    - The User registration and login endpoints are to be created, allowing for the implementation of the JWT authentication solution using the Authlib and fastapi.security libraries.
+        - This is also an ideal time to setup structlog as a logging system.
 
 1. **Client Side Initial Setup**
     - A React application is to be initialized with TypeScript & Vite using React Router to create an initial dashboard, allowing for the introduction of Tailwind CSS and ShadCN UI components.

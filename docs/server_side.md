@@ -328,6 +328,10 @@ The Factory pattern is used to simplify the creation of complex domain objects w
             /core
                 - config.py
                 - database.py
+                - logging.py
+            /middleware
+                - exception_handler.py
+                - logging_middleware.py
             /models
                 - Contains the Database Models.
             /repositories
