@@ -1,6 +1,6 @@
 ## Authentication Requirements
 
-The applications is to contain a minimal amount of personal data. But, whilst minimal, users: emails, postal codes and passwords still require strong protective measures in place and steps to prevent users grow guides from being tampered with must be taken. Due to this the application is to adhere to the OAuth2 and OIDC standards.
+The applications is to contain a minimal amount of personal data. But, whilst minimal, users: emails, postal codes and passwords still require strong protective measures in place and steps to prevent users grow guides from being tampered with must be taken.
 
 As with all other aspects of the application the solution must run on Linux based operating systems and be free for commercial use. Whilst integrating with the modular architecture and able to scale appropriately. It must also be able to run alongside FastAPI & PostgreSQL in a PWA that utilizes a modern front end framework for its user interface.
 
@@ -9,7 +9,6 @@ As with all other aspects of the application the solution must run on Linux base
 - Please refer to the [High Level Requirements](overview.md).
 
 - Must integrate with PostgreSQL & FastAPI.
-- Must adhere to OAuth2 & OpenID Connect (OIDC) standards.
 - Will need to integrate with a modern front end framework in order to deliver a progressive web app (PWA).
 - Must accommodate Representational State Transfer (REST) architectural design principles.
 - Must be able to support offline capabilities as allotments can be in areas of poor signal.
@@ -21,18 +20,18 @@ As with all other aspects of the application the solution must run on Linux base
 
 ## Authentication ADR
 
-Decision record for the authentication solution the application is to utilize. The chosen solution must adhere to the OAuth2 and OIDC standards and as with all other aspects of the application the must run on Linux based operating systems and be free for commercial use. Whilst integrating with the modular architecture and able to scale appropriately. It must also be able to run alongside FastAPI & PostgreSQL in a PWA that utilizes a modern front end framework for its user interface.
+Decision record for the authentication solution the application is to utilize. The chosen solution, as with all other aspects of the application, must run on Linux based operating systems and be free for commercial use. Whilst integrating with the modular architecture and able to scale appropriately. It must also be able to run alongside FastAPI & PostgreSQL in a PWA that utilizes a modern front end framework for its user interface.
 
 !!! success "**Outcome**"
 
-    - **OAuth2 with Json Web Tokens (JWT)**
+    - **Json Web Tokens (JWT)**
 
         - Users will authenticate with a email and password. The backend is to then issue a JWT token that the client includes in subsequent requests. This token contains users claims and is verified on each request. This method of stateless authentication is well suited to scalable APIs however it does require the management of JWT on the client side.
 
         - fastapi.security and Authlib are packages within the FastAPI ecosystem that supports this method of authorization. 
             
             !!! info
-                PyJWT is a lightweight alternative to Authlib, however it does not currently handle OAuth2 providers, excluding it from consideration in this use case. Authlib also provides excellent offline capabilities in line with product requirements.
+                PyJWT is a lightweight alternative to Authlib, however it does not currently handle OAuth2 providers, excluding it from consideration in this use case as an external OAuth2 provider might be desirable in the future. Authlib also provides excellent offline capabilities in line with product requirements.
 
 ??? abstract "**Alternatives**"
 
@@ -42,7 +41,7 @@ Decision record for the authentication solution the application is to utilize. T
 
         - fastapi-users and Starlette Session Middleware are packages within the FastAPI ecosystem that supports this method of authorization.  
 
-    1. OAuth2 with External Providers
+    1. OAuth2 & JWTs with External Providers
 
         - Similar to OAuth2 with JWTs, users authenticate with an external provider (i.e. google, GitHub etc). This provider then issues an access token and the API verifies the token and retrieves user information with each request.
 

@@ -9,7 +9,7 @@ All while delivering a progressive web application experience to many concurrent
 - Please refer to the [High Level Requirements](overview.md).
 
 - Must integrate with a RESTful API written using the FastAPI framework.
-- Must be able to handle OAuth2 & JWTs for user authentication provided from the sever side via fastapi.security and Authlib.
+- Must be able to handle JWTs for user authentication provided from the sever side via fastapi.security and Authlib.
 - Must be able to facilitate the creation of a Progressive Web App.
     - The developer is familiar with JavaScript/TypeScript based frameworks like React and Vue but open to other technologies.
     - The developer is able to produce their own custom components or make use of component libraries like Mui, Tailwind and Bootstrap. But any library used must be free for commercial use.

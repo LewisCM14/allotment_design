@@ -10,7 +10,7 @@ All while delivering a fast and seamless "request - response" experience to many
 
 - Must integrate with PostgreSQL.
 - Must support typing so to harmonize with the robust relation database schema proposed.
-- Must be able to integrate with OAuth2 & OpenID Connect (OIDC) for user authentication.
+- Must be able to integrate with a user authentication system.
 - Must integrate with a user interface that facilities user creation and Create, Read, Update & Delete (CRUD) actions en masse.
     - Will need to integrate with a modern front end framework in order to deliver a progressive web app (PWA).
 - Must adhere to the Representational State Transfer (REST) architectural design principles.
@@ -345,7 +345,7 @@ The Factory pattern is used to simplify the creation of complex domain objects w
 
 ## Server Side ADR
 
-Decision record for the server side technologies selected to support the project. When selecting the intended technologies it is important to remember the project requires a modular, scalable and maintainable architecture to support a progressive web app. The server side must run on Linux based operating systems using technologies that are free for commercial use and can integrate with a PostgreSQL database via a RESTful API with OAuth2 & OpenID Connect support. The technologies must also handle many concurrent users that require a high-read workload, caching is also required to support this as well as background tasks.
+Decision record for the server side technologies selected to support the project. When selecting the intended technologies it is important to remember the project requires a modular, scalable and maintainable architecture to support a progressive web app. The server side must run on Linux based operating systems using technologies that are free for commercial use and can integrate with a PostgreSQL database via a RESTful API with support for user authentication. The technologies must also handle many concurrent users that require a high-read workload, caching is also required to support this as well as background tasks.
 
 !!! success "**Outcome**"
 
@@ -353,7 +353,7 @@ Decision record for the server side technologies selected to support the project
 
         - Python is well suited for Domain-Drive-Design (DDD) and can be written to provide strong typing support. The team are also familiar with the language already.
 
-        - FastAPI is a high performance asynchronous framework, that automatically generates API documentation and can handle many concurrent users and provides strong typing support via Pydantic. SQLAlchemy, Authlib and Redis can be used to handle PostgreSQL and OAuth2 & OIDC integration as well as caching support. Celery can also be used to support background tasks. However it does not provide an out the box admin panel, this is not a strict requirement currently though.
+        - FastAPI is a high performance asynchronous framework, that automatically generates API documentation and can handle many concurrent users and provides strong typing support via Pydantic. SQLAlchemy, Authlib and Redis can be used to handle PostgreSQL and 2 & multiple methods of user authentication as well as caching support. Celery can also be used to support background tasks. However it does not provide an out the box admin panel, this is not a strict requirement currently though.
 
 ??? abstract "**Alternatives**"
 
@@ -361,7 +361,7 @@ Decision record for the server side technologies selected to support the project
 
         - TypeScript is an extremely type safe language that the team do have experience with already and its use would allow them to use the same programming language on the Client & Server sides. However the ecosystem is less mature for PostgreSQL integration than when compared to the Python ecosystem
 
-        - NextJS is a highly modular and scalable framework that offers TypeORM for support in writing database queries that would adhere to the Repository Pattern. As well as integrating with Redis for caching and BullMQ for background tasks. Passport.js could also be used to provide OAuth2 authentication/authorization support.
+        - NextJS is a highly modular and scalable framework that offers TypeORM for support in writing database queries that would adhere to the Repository Pattern. As well as integrating with Redis for caching and BullMQ for background tasks. Passport.js could also be used to provide authentication/authorization support.
 
     1. Python & Django
 
