@@ -17,10 +17,10 @@
 | Server | pydantic-settings | 2.8.1 | Settings Management |
 | Server | Authlib | 1.5.1 | Authentication | 
 | Server | psutil | 7.0.0 | Resource Monitoring | 
-| Server | structlog | 25.2.0 | Application Logging | 
+| Server | strutlog | 25.2.0 | Application Logging | 
 | Server | bcrypt | 4.3.0 | Password Hashing | 
 | Server | email-validator | 2.2.0 | Email Validation | 
-| Server | fastapi.security | | Authentication |
+| Server | slowapi | 0.1.9 | Rate Limiting |
 | Server | Pytest | 8.3.5 | Test Runner |
 | Server | Ruff | 0.9.10 | Formatting & Linting |
 | Server | MyPy | 1.15 | Type Checking |

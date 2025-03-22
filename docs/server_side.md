@@ -328,6 +328,7 @@ The Factory pattern is used to simplify the creation of complex domain objects w
             /core
                 - config.py
                 - database.py
+                - limiter.py
                 - logging.py
             /middleware
                 - exception_handler.py
@@ -337,7 +338,7 @@ The Factory pattern is used to simplify the creation of complex domain objects w
             /repositories
                 - Encapsulate data access logic via SQL/ORM logic abstracting it into "Repositories".
             /schemas
-                - Contains the "Factories" that apply business rules and/or validation before persistence.
+                - Contains the "Factories" or schemas that apply business rules and/or validation before persistence.
             /services
                 - Contains the "Units Of Work" for grouping multiple repository operations into a single transaction.
             /v1
