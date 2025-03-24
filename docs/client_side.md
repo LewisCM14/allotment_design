@@ -292,13 +292,32 @@ There are several aspects to consider when deciding on the appropriate technolog
     Due to the application having clearly defined interfaces that can be grouped into features, a feature based folder structure makes sense, allowing related logic to be kept together.
 
     ``` title="Example Frontend Folder Structure"
-    /src
-        /features
-            /growGuides
-                - GrowGuideContainer.tsx
-                - GrowGuidePresenter.tsx
-                - growGuideService.ts
-                - growGuideSchema.ts
+    
+    /frontend
+        /src
+            /assets
+            /components
+                /layouts
+                /ui
+            /context
+                - AuthContext.tsx
+            /features
+                /growGuides
+                    - GrowGuideContainer.tsx
+                    - GrowGuidePresenter.tsx
+                    - growGuideService.ts
+                    - growGuideSchema.ts
+            /lib
+                - utils.ts
+            /routes
+                - AppRoutes.tsx
+                - ProtectedRoutes.tsx
+            /services
+                - api.ts
+        - App.tsx
+        - global.css
+        - main.tsc
+    - .env
     ```
 
 ---
@@ -331,46 +350,152 @@ There are several aspects to consider when deciding on the appropriate technolog
 
 === "Dark Mode"
 
-    **Primary Dark**
+    **Primary Text/Outline** - _White_
 
-    - "#000000"
+    - hex #ffffff
+    - oklch(100% 0 0)
+    - rgb(255 255 255)
 
-    **Secondary Dark**
+        ??? example "Tailwind Variables"
+            --foreground,
+            --card-foreground,
+            --secondary-foreground,
+            --sidebar-foreground,
+            --popover-foreground,
+            --accent-foreground,
+            --sidebar-accent-foreground,
+            --muted-foreground,
+            --primary foreground,
+            --sidebar-primary-foreground,
+            --border,
+            --sidebar-border,
 
-    - "#3c4a3e"
+    **Primary Dark** - _Dark Green_
 
-    **Tertiary Dark**
+    - hex #3c4a3e
+    - oklch(39.29% 0.0269 149.09)
+    - rgb(60 74 62)
 
-    - "#9fafa1"
+        ??? example "Tailwind Variables"
+            --background
+
+
+    **Secondary Dark** - _Black_
+
+    - hex #000000
+    - oklch(0% 0 0)
+    - rgb(0 0 0)
+
+        ??? example "Tailwind Variables"
+            --card,
+            --secondary,
+            --sidebar,
+
+
+    **Tertiary Dark** - _Grey_
+
+    - hex #9fafa1
+    - oklch(73.74% 0.0267 148.96)
+    - rgb(159 175 161)
+
+        ??? example "Tailwind Variables"
+            --popover,
+            --accent,
+            --sidebar-accent,
 
 === "Light Mode"
 
-    **Primary Light**
+    **Primary Text/Outline** - _Black_
 
-    - "#ffffff"
+    - hex #000000
+    - oklch(0% 0 0)
+    - rgb(0 0 0)
 
-    **Secondary Light**
+        ??? example "Tailwind Variables"
+            --foreground,
+            --card-foreground,
+            --secondary-foreground,
+            --sidebar-foreground,
+            --popover-foreground,
+            --accent-foreground,
+            --sidebar-accent-foreground,
+            --muted-foreground,
+            --primary foreground,
+            --sidebar-primary-foreground,
+            --border,
+            --sidebar-border,
 
-    - "#f0f2e6"
+    **Primary Light** - _Off White_
 
-    **Tertiary Light**
+    - hex #f0f2e6
+    - oklch(95.63% 0.016 114.38)
+    - rgb(240 242 230)
 
-    - "#81885a"
+        ??? example "Tailwind Variables"
+            --background
+    
+
+    **Secondary Light** - _White_
+
+    - hex #ffffff
+    - oklch(100% 0 0)
+    - rgb(255 255 255)
+
+        ??? example "Tailwind Variables"
+            --card,
+            --secondary,
+            --sidebar,
+
+
+    **Tertiary Light** - _Sand_
+
+    - hex #81885a
+    - oklch(60.91% 0.0657 115.43)
+    - rgb(129 136 90)
+
+        ??? example "Tailwind Variables"
+            --popover,
+            --accent,
+            --sidebar-accent,
 
 === "Interactions"
 
-    **Primary Active**
+    **Primary Active** - _Green_
 
-    - "#007333"
+    - hex #007333
+    - oklch(48.56% 0.133153 150.185)
+    - rgb(0 115 51)
 
-    **Positive Action**
+        ??? example "Tailwind Variables"
+            --primary,
+            --sidebar-primary,
 
-    - "#007a4e"
 
-    **Neutral Action**
+    **Positive Action** - _Light Green_
 
-    - "#0076bb"
+    - hex #007a4e
+    - oklch(51.11% 0.116394 159.5934)
+    - rgb(0 122 78)
 
-    **Negative Action**
+        ??? example "Tailwind Variables"
+            --input,
+            --ring,
+            --sidebar-ring,
 
-    - "#ba2c37"
+    **Neutral Action** - _Blue_
+
+    - hex #0076bb
+    - oklch(54.7% 0.1381 245.15)
+    - rgb(0 118 187)
+
+        ??? example "Tailwind Variables"
+            --muted
+
+    **Negative Action** - _Red_
+
+    - hex #ba2c37
+    - oklch(52.2% 0.1777 22.14)
+    - rgb(186 44 55)
+
+        ??? example "Tailwind Variables"
+            --destructive
