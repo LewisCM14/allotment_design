@@ -322,7 +322,7 @@ The Factory pattern is used to simplify the creation of complex domain objects w
 
     Due to the server-side being a FastAPI application that has a well defined architecture that makes use of specified design patterns the following folder structure makes sense, allowing related logic to be kept together.
 
-    ``` title="Example Backend Folder Structure"
+    ``` title="FastAPI & Python Application"
     /app
         /api
             /core
@@ -343,6 +343,9 @@ The Factory pattern is used to simplify the creation of complex domain objects w
                 - Contains the "Units Of Work" for grouping multiple repository operations into a single transaction.
             /v1
                 - Contains the API Endpoints.
+        /keys
+            - private.pem
+            - public.pem
         - main.py
         - settings.yaml
     ```

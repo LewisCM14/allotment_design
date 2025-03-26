@@ -291,22 +291,26 @@ There are several aspects to consider when deciding on the appropriate technolog
 
     Due to the application having clearly defined interfaces that can be grouped into features, a feature based folder structure makes sense, allowing related logic to be kept together.
 
-    ``` title="Example Frontend Folder Structure"
+    ``` title="Vite & React Application"
     
     /frontend
+        /public
+            - Static assets that are served directly, i.e. a Favicon.
         /src
             /assets
+                - Resources that are imported directly into the code, i.e. a logo.
             /components
                 /layouts
+                    - Contains components that dictate page layouts.
                 /ui
-            /context
-                - AuthContext.tsx
+                    - Contains UI components to use as interface building blocks.
             /features
-                /growGuides
-                    - GrowGuideContainer.tsx
-                    - GrowGuidePresenter.tsx
-                    - growGuideService.ts
-                    - growGuideSchema.ts
+                /user
+                    - LoginForm.tsx
+                    - RegisterForm.tsx
+                    - UserService.tsx
+            /hooks
+                - useLogout.tsx
             /lib
                 - utils.ts
             /routes
@@ -314,10 +318,28 @@ There are several aspects to consider when deciding on the appropriate technolog
                 - ProtectedRoutes.tsx
             /services
                 - api.ts
-        - App.tsx
-        - global.css
-        - main.tsc
-    - .env
+            /store
+                /auth
+                    - AuthContext.tsx
+                    - AuthProvider.tsx
+                /theme
+                    - ThemeContext.tsx
+                    - ThemeProvider.tsx
+            /types
+                - Common interfaces & types, i.e. NavigationTypes.ts
+            - App.tsx
+            - global.css
+            - main.tsc
+            - vite-env.d.ts
+        - .env
+        - components.json
+        - index.html
+        - package-lock.json
+        - package.json
+        - tsconfig.app.json
+        - tsconfig.json
+        - tsconfig.node.json
+        - vite.config.ts
     ```
 
 ---
